@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jordan Releases</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css\index.css' %}"  />
+    <script src="https://kit.fontawesome.com/c6234539c7.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+     crossorigin="anonymous">
+</head>
+<body>
+    <nav id="nav">
+        <h1>Jordan New Releases</h1>
+          <div>
+             <img id="jordanimage" src="{% static 'images\jordanlogo.png'%}"/>
+          </div>
+        <ul>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>About</li></a>
+            <a href=""><li>Contact</li></a>
+        </ul>
+    </nav>
+    <main>
+        <section id="leftS">
+            <h2 id="titleLeft">A Couple of New Releases.</h2>
+            <div id="photoSection">
+                <div id="row1">
+                    <!--box-->
+                    <div style="border-style:outset; width:200px; background-color: #e8e8e8;">
+                        <img class="ones" src="{% static 'images\1s.jpg'%}"/>
+                        <h3>Jordan 1's</h3>
+                        <div style="display:flex; height:10px;">
+                            <form style="height:10px;">
+                                <button class="AddC"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                                <input class="inputI" type="text" value="1">
+                                <hr>
+                                <strong><p>$ 40.00</p></strong>
+                            </form>
+                        </div>
+                    </div>
+                    <!--box-->
+                    <div style="border-style:outset; width:200px; background-color: #e8e8e8;">
+                       <img class="ones" src="{% static 'images\retro.jpg'%}"/>
+                        <h3>Retro</h3>
+                        <div style="display:flex; height:10px;">
+                            <form style="height:10px;">
+                                <button class="AddC"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                                <input class="inputI" type="text" value="1">
+                                <hr>
+                                <strong><p>$ 80.00</p></strong>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="row2" >
+                    <!--box-->
+                    <div style="border-style:outset; width:200px; background-color: #e8e8e8;">
+                        <img class="ones" src="{% static 'images\air3.jpg'%}"/>
+                        <h3>Air Jordan 3</h3>
+                        <div style="display:flex; height:10px;">
+                            <form style="height:10px;">
+                                <button class="AddC"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                                <input class="inputI" type="text" value="1">
+                                <hr>
+                                <strong><p>$ 60.00</p></strong>
+                            </form>
+                        </div>
+                    </div>
+                    <!--box-->
+                    <div style="border-style:outset; width:200px; height:279px; background-color: #e8e8e8;">
+                        <img class="ones" src="{% static 'images\air4.jpg'%}"/>
+                        <h3>Air Jordan 4</h3>
+                            <div style="display:flex; height:10px;">
+                                <form style="height:10px;">
+                                    <button class="AddC"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                                    <input class="inputI" type="text" value="1">
+                                    <hr>
+                                    <strong><p>$ 50.00</p></strong>
+                                </form>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+
+          </section>
+          <section id="rightS">
+              <div>
+                  <h2 style="text-align:center;">Cart Items</h2>
+              </div>
+                    <table id="Table">
+                        <tr>
+                            <th class="tableD">Item</th>
+                            <th class="tableD" >Price</th>
+                            <th class="tableD" >Quantity</th>
+                        </tr>
+                        <tr  >
+                            <td style="border-right:solid;" class="tableD">
+                                <p class="tableText">
+                                <img style="width:11%;" src="{% static 'images\air4.jpg'%}"/>Jordan 4</p></td>
+                            <td style="border-right:solid;" class="tableD"><p class="tableText">$ 40.00</p></td>
+                            <td class="tableD"><p class="tableText">1</p></td>
+                            <td><button id="outterTrash"><i id="trash" class="fas fa-trash-alt"></i></button></td>
+                        </tr>
+                    </table>
+              <hr>
+              <button class="btn btn-success" id="checkoutbutton" >Checkout</button>
+
+         </section>
+
+    </main>
+    <main>
+
+    </main>
+
+</body>
+</html>
