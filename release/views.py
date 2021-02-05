@@ -4,3 +4,9 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'index.html')
+
+def cart(request):
+    return render(request, 'cart.html')
+
+def shippinginfo(request):
+    return render(request, 'shippinginfo.html')

@@ -1,0 +1,59 @@
+{% extends 'index.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+
+<section id="wholesection">
+        <form id="shippingform">
+            <h2 style="color:white; margin-bottom:5%; margin-left:2%;">Shipping Information</h2>
+            <div class="shippindinfo"><label for="name"> Name(First/Last): </label><input id="name" type="text"
+            class="input"></div>
+            <div class="shippindinfo"><label for="name">Email: </label><input id="email" type="text"
+            class="input"></div>
+            <div class="shippindinfo" ><label for="address"> Shipping Address: </label><input id="address" type="text"
+            class="input" ></div>
+            <div class="shippindinfo" ><label for="zipcode"> Zip Code: </label><input id="zipcode"type="text"
+            class="input" ></div>
+            <div class="shippindinfo" ><label for="state"> City, State </label><input id="state" type="text"
+            class="input" ></div>
+            <div style="display:flex; width:100%;">
+                <button type="button" style="width:20%; height:10%;"class="btn btn-danger"><i class="fas fa-backward"></i> Back</button>
+                <button type="button"  style="width:30%; height:10%; display:inline; margin-left: 30%;"
+                        class="btn btn-success" >Place Order</button>
+            </div>
+        </form>
+    <section >
+        <h2 style="position:relative; left:90%;">Cart Items</h2>
+        <table id="tableC" class="tableSection">
+                <tr>
+                    <th>Item</th>
+                    <th class="HeadSpace HeadSpace2" >Price</th>
+                    <th class="HeadSpace HeadSpace2" >Quantity</th>
+                </tr>
+                <tr>
+                    <td>Jordan 4</td>
+                    <td class="HeadSpace HeadSpace2"> $40.00</td>
+                    <td class="HeadSpace HeadSpace2" style="display:flex;"> 2
+                        <div id="updown"> <a style="color:black;"href="">
+                            <i class="fas fa-sort-up updownbutton" ></i></a>
+                            <a style="color:black; position:relative; top:-10px;" href="">
+                                <i class="fas fa-sort-down updownbutton" ></i>
+                            </a> </div></td>
+                    <td><button type="button" class="btn btn-danger" style="
+                    position:relative; left: 60%;">Remove</button></td>
+                </tr>
+        </table>
+    </section>
+</section>
+
+
+
+
+{% endblock content %}
+</body>
+</html>
