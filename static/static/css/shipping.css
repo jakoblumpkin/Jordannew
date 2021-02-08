@@ -1,0 +1,45 @@
+.shippindinfo{
+    display: flex;
+    margin-bottom:5%;
+    margin-left:2%;
+}
+
+.input{
+     margin-left: 1%;
+}
+
+#address{
+    width:60%;
+}
+
+#name{
+    width:30%;
+}
+
+#shippingform{
+    margin-top:4%;
+    width:49%;
+    height:460px;
+    margin-left:5%;
+    background-color:gray;
+    border:outset;
+}
+
+#email{
+    width:50%;
+}
+
+#wholesection{
+    display:flex;
+}
+
+.tableSection{
+    position:relative;
+    left:15%;
+    top:50px;
+     width: 1%;
+}
+
+.HeadSpace2{
+    margin-left: 45%;
+}

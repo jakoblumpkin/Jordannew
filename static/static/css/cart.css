@@ -1,0 +1,50 @@
+#cartbody{
+
+}
+
+#headertitle{
+    background-color:#8B0000;
+}
+
+#tableC{
+    margin-left:22%;
+    width:30%;
+}
+
+
+
+.HeadSpace{
+   margin-left: 70%;
+   display:inline;
+}
+
+#tableC tr{
+    display:flex;
+}
+
+#aroundTable{
+
+}
+
+
+#updown{
+    position:relative;
+    left:10px;
+    top:-4px;
+}
+
+.updownbutton{
+ font-size:23px;
+}
+
+#downbutton{
+
+}
+
+#outsideoftable{
+    width:80%;
+    margin:0 auto;
+    background-color:#f1f1f1;
+    border: outset;
+}
+

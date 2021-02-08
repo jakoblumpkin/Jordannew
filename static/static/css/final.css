@@ -1,0 +1,15 @@
+#headersection{
+    display:flex;
+}
+#LeftSide{
+    width:50%;
+    background-color: brown;
+}
+
+#RightSide{
+    width:50%;
+}
+
+.colorText{
+    color:white;
+}

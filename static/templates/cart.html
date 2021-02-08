@@ -1,0 +1,51 @@
+{% extends 'index.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<section id="cartbody">
+    <header id="headertitle">
+            <h3 style="text-align:center; color:white;">Cart Items</h3>
+    </header>
+    <div id="aroundTable">
+        <div id="outsideoftable">
+            <!-- Display Cart Items-->
+                <table id="tableC">
+                    <tr>
+                        <th>Item</th>
+                        <th class="HeadSpace">Price</th>
+                        <th class="HeadSpace" >Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Jordan 4</td>
+                        <td class="HeadSpace"> $40.00</td>
+                        <td class="HeadSpace" style="display:flex;"> 2
+                            <div id="updown"> <a style="color:black;"href="">
+                                <i class="fas fa-sort-up updownbutton" ></i></a>
+                                <a style="color:black; position:relative; top:-10px;" href="">
+                                    <i class="fas fa-sort-down updownbutton" ></i>
+                                </a> </div></td>
+                        <td><button type="button" class="btn btn-danger" style="
+                        position:relative; left: 60%;">Remove</button></td>
+                    </tr>
+                </table>
+            <div>
+                <a href="/" style="width:40%; height:45%;"><button type="button"  style="width:20%; height:30%;"class="btn btn-danger">
+                    <i class="fas fa-backward"></i> Back</button></a>
+                <a href="/shippinginfo/"><button class="btn btn-primary" type="button"> Continue with checkout</button></a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+{% endblock content %}
+</body>
+</html>
