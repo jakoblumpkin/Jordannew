@@ -20,10 +20,15 @@
                         <th class="HeadSpace">Price</th>
                         <th class="HeadSpace" >Quantity</th>
                     </tr>
+                    {% for j in allitems %}
                     <tr>
-                        <td>Jordan 4</td>
-                        <td class="HeadSpace"> $40.00</td>
-                        <td class="HeadSpace" style="display:flex;"> 2
+                        <td>{{j.Name}}</td>
+                        <td class="HeadSpace"> ${{j.price}}</td>
+                        <td class="HeadSpace" style="display:flex;">
+                            {% if i.id == 1 %} <p>{{one}}</p>{% endif %}
+                            {% if i.id == 2 %} <p>{{two}} </p>{% endif %}
+                            {% if i.id == 3 %} <p>{{three}}</p>{% endif %}
+                            {% if i.id == 4 %} <p>{{four}}</p>{% endif %}
                             <div id="updown"> <a style="color:black;"href="">
                                 <i class="fas fa-sort-up updownbutton" ></i></a>
                                 <a style="color:black; position:relative; top:-10px;" href="">
@@ -32,8 +37,13 @@
                         <td><button type="button" class="btn btn-danger" style="
                         position:relative; left: 60%;">Remove</button></td>
                     </tr>
+                    {% endfor %}
                 </table>
-            <button class="btn btn-primary" type="button"> Continue with checkout</button>
+            <div>
+                <a href="/" style="width:40%; height:45%;"><button type="button"  style="width:20%; height:30%;"class="btn btn-danger">
+                    <i class="fas fa-backward"></i> Back</button></a>
+                <a href="/shippinginfo/"><button class="btn btn-primary" type="button"> Continue with checkout</button></a>
+            </div>
         </div>
     </div>
 

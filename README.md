@@ -1,2 +1,0 @@
-# Jordannew
-NOT COMPLETED
