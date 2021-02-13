@@ -9,23 +9,23 @@
 {% block content %}
 
 <section id="wholesection">
-        <form id="shippingform">
+        <form id="shippingform" method="POST" action="/final/">{% csrf_token %}
             <h2 style=" margin-bottom:5%; margin-left:2%;">Shipping Information</h2>
-            <div class="shippindinfo"><label for="name"><strong> Name(First/Last): </strong></label><input id="name" type="text"
+            <div class="shippindinfo"><label for="name"><strong> Name(First/Last): </strong></label><input name="name" id="name" type="text"
             class="input"></div>
-            <div class="shippindinfo"><label for="name"><strong> Email: </strong></label><input id="email" type="text"
+            <div class="shippindinfo"><label for="name"><strong> Email: </strong></label><input name="email" id="email" type="text"
             class="input"></div>
             <div class="shippindinfo" ><label for="address"><strong>  Shipping Address: </strong></label>
-                <input id="address" type="text"
+                <input name="address" id="address" type="text"
             class="input" ></div>
-            <div class="shippindinfo" ><label for="zipcode"><strong> Zip Code: </strong></label><input id="zipcode"type="text"
+            <div class="shippindinfo" ><label for="zipcode"><strong> Zip Code: </strong></label><input name="zipcode"id="zipcode"type="text"
             class="input" ></div>
-            <div class="shippindinfo" ><label for="state"><strong> City, State </strong></label><input id="state" type="text"
+            <div class="shippindinfo" ><label for="state"><strong> City, State </strong></label><input name="state" id="state" type="text"
             class="input" ></div>
             <div style="display:flex; width:100%;">
                 <a href="/cart/" style="width:30%; height:45%;"><button type="button"  style="width:70%; height:30%;"class="btn btn-danger">
                     <i class="fas fa-backward"></i> Back</button></a>
-                <button type="button"  style="width:30%; height:10%; display:inline; margin-left: 30%;"
+                <button type="submit"  style="width:30%; height:10%; display:inline; margin-left: 30%;"
                         class="btn btn-success" >Place Order</button>
             </div>
         </form>
@@ -37,18 +37,24 @@
                     <th class="HeadSpace HeadSpace2" >Price</th>
                     <th class="HeadSpace HeadSpace2" >Quantity</th>
                 </tr>
+                 {% for e in allitems%}
                 <tr>
-                    <td>Jordan 4</td>
-                    <td class="HeadSpace HeadSpace2"> $40.00</td>
-                    <td class="HeadSpace HeadSpace2" style="display:flex;"> 2
-                        <div id="updown"> <a style="color:black;"href="">
+                    <td>{{e.Name}}</td>
+                    <td class="HeadSpace HeadSpace2"> ${{e.price}}</td>
+                    <td class="HeadSpace HeadSpace2" style="display:flex;">
+                         {% if e.id == 1 %}<p>{{one}}</p>{% endif %}
+                            {% if e.id == 2 %} <p>{{two}} </p>{% endif %}
+                            {% if e.id == 3 %} <p>{{three}}</p>{% endif %}
+                            {% if e.id == 4 %} <p>{{four}}</p>{% endif %}
+                        <div id="updown"> <!--<a style="color:black;"href="">
                             <i class="fas fa-sort-up updownbutton" ></i></a>
-                            <a style="color:black; position:relative; top:-10px;" href="">
+                         <a style="color:black; position:relative; top:-10px;" href="">
                                 <i class="fas fa-sort-down updownbutton" ></i>
-                            </a> </div></td>
+                            </a>--> </div></td>
                     <td><button type="button" class="btn btn-danger" style="
                     position:relative; left: 60%;">Remove</button></td>
                 </tr>
+                {% endfor %}
         </table>
     </section>
 </section>

@@ -11,6 +11,7 @@ class Items(models.Model):
 class shipping_info(models.Model):
     name=models.CharField(max_length=100)
     email=models.EmailField()
+    address = models.CharField(max_length=100, null=True)
     zipcode=models.CharField(max_length=20)
     citystate=models.CharField(max_length=100)
 
