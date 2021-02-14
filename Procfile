@@ -1,0 +1,1 @@
+web: gunicorn jordan.wsgi --log-file -
